@@ -157,15 +157,28 @@ wheels = [
 ]
 
 [[package]]
+name = "middleman"
+version = "0.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e3/ab/94f8d7ba557493873e1d2fe067f2bec3abe52c89a120808409e114bcb575/middleman-0.0.1.tar.gz", hash = "sha256:bae4371c6131de71858bb7d96394c392c17b83cc2d86fe888de1b234d92e0e72", size = 1027 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/11/92/d4226b1c0c50519c0b2a483acb88eb8a242c057f731607df553cdd066b00/middleman-0.0.1-py3-none-any.whl", hash = "sha256:c799f805f5d259161048674aaceadbd639463be4f1fce627ee2f66e0d38e6225", size = 2188 },
+]
+
+[[package]]
 name = "middleman-mcp"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "mcp", extra = ["cli"] },
+    { name = "middleman" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "mcp", extras = ["cli"], specifier = ">=1.6.0" }]
+requires-dist = [
+    { name = "mcp", extras = ["cli"], specifier = ">=1.6.0" },
+    { name = "middleman", specifier = ">=0.0.1" },
+]
 
 [[package]]
 name = "pydantic"
