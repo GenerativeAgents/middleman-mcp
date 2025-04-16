@@ -1,11 +1,9 @@
-# server.py
 from mcp.server.fastmcp import FastMCP
 from middleman_ai import ToolsClient
 from middleman_ai.client import Presentation, Slide, Placeholder
 import os
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Literal
 
-# Create an MCP server
 mcp = FastMCP("Middleman Tools")
 
 api_key = os.environ.get("MIDDLEMAN_API_KEY", "")
@@ -108,5 +106,15 @@ def json_to_pptx_execute(pptx_template_id: str, slides: List[Dict[str, Any]]) ->
     return client.json_to_pptx_execute_v2(pptx_template_id, presentation)
 
 
+def run_server(transport: Literal["stdio", "sse"] = "stdio"):
+    """
+    MCPサーバーを実行します。
+
+    Args:
+        transport: 使用するトランスポート方式（"stdio", "sse"）
+    """
+    mcp.run(transport=transport)
+
+
 if __name__ == "__main__":
-    mcp.run(transport="stdio")
+    run_server(transport="stdio")

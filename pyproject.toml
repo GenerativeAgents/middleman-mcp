@@ -1,10 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "middleman-mcp"
 version = "0.1.0"
-description = "Add your description here"
+description = "Middleman AI SDK MCP Server Python Package"
 readme = "README.md"
 requires-python = ">=3.11.1"
+license = {text = "MIT"}
+authors = [
+    {name = "Generative Agents, Inc."}, 
+]
+
 dependencies = [
     "mcp[cli]>=1.6.0",
     "middleman-ai>=0.0.4",
 ]
+
+[project.urls]
+"Homepage" = "https://github.com/GenerativeAgents/middleman-mcp"
+
+[project.scripts]
+middleman-mcp = "middleman_mcp.cli.main:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"] 
