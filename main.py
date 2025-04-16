@@ -1,5 +1,8 @@
+from middleman_mcp.cli.main import cli
+
 def main():
-    print("Hello from middleman-mcp!")
+    """エントリーポイント関数"""
+    cli()
 
 
 if __name__ == "__main__":

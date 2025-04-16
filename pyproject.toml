@@ -1,10 +1,23 @@
 [project]
 name = "middleman-mcp"
 version = "0.1.0"
-description = "Add your description here"
+description = "Middleman MCP server for document conversion tools"
 readme = "README.md"
-requires-python = ">=3.11.1"
+requires-python = ">=3.10"
 dependencies = [
     "mcp[cli]>=1.6.0",
     "middleman-ai>=0.0.4",
+    "click>=8.0.0",
 ]
+authors = [{ name = "Generative Agents, Inc." }]
+license = { text = "MIT" }
+
+[project.scripts]
+middleman-mcp = "middleman_mcp.cli.main:cli"
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}

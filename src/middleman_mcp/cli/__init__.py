@@ -1,0 +1,1 @@
+"""Middleman MCP CLI モジュール"""

@@ -1,3 +1,15 @@
+Metadata-Version: 2.4
+Name: middleman-mcp
+Version: 0.1.0
+Summary: Middleman MCP server for document conversion tools
+Author: Generative Agents, Inc.
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: middleman-ai>=0.0.4
+Requires-Dist: click>=8.0.0
+
 # middleman-mcp
 
 Middleman MCP（Model Context Protocol）サーバーを実行するためのPythonパッケージです。
