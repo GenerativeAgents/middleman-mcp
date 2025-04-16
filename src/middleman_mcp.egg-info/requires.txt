@@ -1,0 +1,3 @@
+mcp[cli]>=1.6.0
+middleman-ai>=0.0.4
+click>=8.0.0
