@@ -3,7 +3,7 @@ name = "middleman-mcp"
 version = "0.1.0"
 description = "Middleman MCP server for document conversion tools"
 readme = "README.md"
-requires-python = ">=3.11.1"
+requires-python = ">=3.10"
 dependencies = [
     "mcp[cli]>=1.6.0",
     "middleman-ai>=0.0.4",
